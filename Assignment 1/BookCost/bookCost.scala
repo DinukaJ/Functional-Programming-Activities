@@ -1,13 +1,7 @@
 object bookCost extends App{
-    def findBookCost(bc:Int):Double={
-        var x=(24.95*60)*(0.6);
-        if(bc>50)
-        {
-            x=x+(bc-50)*0.75;
-        }
-        x=x+3;
-        x
-    }
-    var va=findBookCost(60);
-    println(f"$va%.2f");
+    def booksFullAmount(bCount:Integer):Double=bCount*24.95;
+    def discount(price:Double):Double=price*0.4;
+    def shipping(bCount:Integer):Double=3+(bCount-50)*0.75;
+
+    printf("%.2f",booksFullAmount(60)-discount(booksFullAmount(60))+shipping(60));
 }
