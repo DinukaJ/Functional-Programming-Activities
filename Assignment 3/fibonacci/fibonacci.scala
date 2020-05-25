@@ -5,9 +5,9 @@ object fibonacci extends App{
         case _ => getFib(n-1) + getFib(n-2)
     }
 
-    def printFib(n:Int, m:Int=0):Unit = m match {
-        case m if(m==n) =>
-        case m => println(getFib(m)); printFib(n,m+1)
+    def printFib(n:Int):Unit = {
+        if(n>0) printFib(n-1)
+        println(getFib(n))
     }
 
     printFib(10)
