@@ -7,7 +7,7 @@ object primeSeq extends App{
     }
 
     def primeSeq(n:Int,a:Int=2): Unit = a match{
-        case a if(a==n) => return
+        case a if(a==n) => 
         case a if(prime(a)) => println(a); primeSeq(n,a+1)
         case _ => primeSeq(n,a+1)
     }
