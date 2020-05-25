@@ -1,16 +1,13 @@
 object evenOdd extends App{
-    def isEven(n:Int):Boolean = if(n%2==0) true else false
-
-    def evenOddCheck(n:Int, m:Int=1):Unit ={
-        if(m==n) 
-            return
-        else
-        {
-            if(isEven(m)) println("Even "+m) else println("Odd "+m)
-
-            evenOddCheck(n,m+1)
-        }
+    def isEven(n:Int) :Boolean = n match {
+        case 0 => true
+        case _ => isOdd(n-1)
     }
 
-    evenOddCheck(10);
+    def isOdd(n:Int):Boolean = !(isEven(n))
+
+    if(isEven(3))
+        println("Even")
+    else
+        println("Odd")
 }
