@@ -1,2 +1,6 @@
 *.class
 *.log
+.metals/metals.h2.db
+.metals/metals.lock.db
+.metals/readonly/scala/Double.scala
+.metals/readonly/scala/Predef.scala
