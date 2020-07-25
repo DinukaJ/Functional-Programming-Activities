@@ -15,7 +15,7 @@ class Account(nic:String, accNo:Int, balance:Double){
 }
 
 object BankAccount extends App{
-    var bank:List[Account]=List(new Account("123",1456123,25000), new Account("124",1456143,1000), new Account("122",1446143,-1000), new Account("234",1455143,100000));
+    var bank:List[Account]=List(new Account("123",1456123,25000), new Account("124",1456143,1000), new Account("122",1446143,-1000), new Account("234",1455143,100000))
 
     val overdraft=(bank:List[Account])=>bank.filter((x)=>x.accBalance<0)
     val balance=(bank:List[Account])=>bank.reduce((x,y)=>new Account("",0,x.accBalance+y.accBalance))
